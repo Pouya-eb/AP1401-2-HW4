@@ -7,7 +7,7 @@
 class Account {
 public:
     Account(double balance = 0);
-    ~Account();
+    virtual ~Account();
     Account(const Account&);
     Account(Account&&);
     Account& operator=(const Account&);
