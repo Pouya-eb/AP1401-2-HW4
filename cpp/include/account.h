@@ -7,14 +7,14 @@
 class Account {
 public:
     Account(double balance = 0);
-    virtual ~Account();
-    Account(const Account&);
-    Account(Account&&);
-    Account& operator=(const Account&);
-    Account& operator=(Account&&);
+    virtual ~Account() = default;
+    Account(const Account&) = default;
+    Account(Account&&) = default;
+    Account& operator=(const Account&) = default;
+    Account& operator=(Account&&) = default;
 
     void deposit(double);
-    bool withdraw(double);
+    virtual bool withdraw(double);
     double get_balance() const;
 
     // std::vector<Transaction> transactions_;

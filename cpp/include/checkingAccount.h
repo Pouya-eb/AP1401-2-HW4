@@ -6,12 +6,12 @@ class CheckingAccount
     : public Account {
 public:
     CheckingAccount(double balance = 0, double fee = 1);
-    virtual ~CheckingAccount() override;
-    CheckingAccount(const CheckingAccount&);
-    CheckingAccount(CheckingAccount&&);
-    CheckingAccount& operator=(const CheckingAccount&);
-    // CheckingAccount& operator=(CheckingAccount&&);
-    // bool withdraw(double);
+    virtual ~CheckingAccount() override = default;
+    CheckingAccount(const CheckingAccount&) = default;
+    CheckingAccount(CheckingAccount&&) = default;
+    CheckingAccount& operator=(const CheckingAccount&) = default;
+    CheckingAccount& operator=(CheckingAccount&&) = default;
+    virtual bool withdraw(double) override;
 
 private:
     double fee;
