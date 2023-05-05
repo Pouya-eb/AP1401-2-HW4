@@ -7,8 +7,8 @@ class Currency {
 public:
     Currency(const std::string&, double);
     ~Currency() = default;
-    std::string getName();
-    double getExchangeRate();
+    std::string getName() const;
+    double getExchangeRate() const;
 
 private:
     std::string name;
