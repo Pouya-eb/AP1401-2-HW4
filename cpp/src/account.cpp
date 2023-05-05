@@ -16,6 +16,7 @@ bool Account::withdraw(double amount)
         std::cout << "There is not enough money to withdraw" << std::endl;
         return 0;
     }
+    // transactions_.push_back()
     balance_ -= amount;
     return 1;
 }

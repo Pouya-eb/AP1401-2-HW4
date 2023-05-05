@@ -1,6 +1,7 @@
 #ifndef ACCOUNT_H
 #define ACCOUNT_H
 
+#include "transaction.h"
 #include <iostream>
 #include <vector>
 
@@ -17,7 +18,7 @@ public:
     virtual bool withdraw(double);
     double get_balance() const;
 
-    // std::vector<Transaction> transactions_;
+    std::vector<Transaction> transactions_;
 
 private:
     double balance_;
