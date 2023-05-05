@@ -11,11 +11,11 @@
 class Customer {
 public:
     Customer(const std::string&, const std::string&);
-    Customer(const Customer&);
-    Customer(Customer&&);
-    ~Customer();
-    // Customer& operator=(const Customer&);
-    // Customer& operator=(Customer&&);
+    Customer(const Customer&) = default;
+    Customer(Customer&&) = default;
+    ~Customer() = default;
+    Customer& operator=(const Customer&) = default;
+    Customer& operator=(Customer&&) = default;
 
     bool authenticate(const std::string&);
     // void addAccount(Account*, const Currency&);
