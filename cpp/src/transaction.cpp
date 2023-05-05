@@ -6,12 +6,7 @@ Transaction::Transaction(const std::string& from_, const std::string& to_, doubl
     , amount { amount_ }
     , currency { currency_ }
 {
-    std::cout << "Transaction constructor" << std::endl;
 }
-// Transaction::~Transaction()
-// {
-//     std::cout << "destructor" << std::endl;
-// }
 std::string Transaction::getFrom() const
 {
     return from;

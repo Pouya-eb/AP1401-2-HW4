@@ -6,7 +6,7 @@
 class Transaction {
 public:
     Transaction(const std::string&, const std::string&, double, const std::string&);
-    // ~Transaction();
+    ~Transaction() = default;
 
     std::string getFrom() const;
     std::string getTo() const;
